@@ -4,12 +4,12 @@
 #include "figures_global.h"
 #include<QList>
 
-/*class FIGURESSHARED_EXPORT Figures
+class FIGURESSHARED_EXPORT Figures
 {
 
 public:
     Figures();
-};*/
+};
 enum figure_ID { Tri, Sqr, Ckl};
 
 class FIGURESSHARED_EXPORT figure{
