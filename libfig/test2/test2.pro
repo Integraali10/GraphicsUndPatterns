@@ -5,13 +5,14 @@ CONFIG += c++11
 
 TARGET = test2
 CONFIG += console
-CONFIG -= app_bundle
 
 TEMPLATE = app
 
 SOURCES += main.cpp
 
-unix: LIBS += -L$$PWD/../figures/ -lfigures.1.0.0
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../libfig/build-figures-Desktop_Qt_5_9_1_MinGW_64bit-Release/release/ -llibfigures.dll
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../libfig/build-figures-Desktop_Qt_5_9_1_MinGW_64bit-Release/debug/ -llibfigures.dll
+else:unix: LIBS += -L$$PWD/../../libfig/build-figures-Desktop_Qt_5_9_1_MinGW_64bit-Release/ -llibfigures.dll
 
-INCLUDEPATH += $$PWD/../figures
-DEPENDPATH += $$PWD/../figures
+INCLUDEPATH += $$PWD/../../libfig/figures
+DEPENDPATH += $$PWD/../../libfig/figures

@@ -7,6 +7,6 @@ int main(int argc, char *argv[])
     f.addFig(Ckl, {3, 4, 8});
     f.addFig(Sqr, {5, 7, 8});
     f.addFig(Tri, {3, 4, 7, 8});
-    f.output("/Users/ekaterinakuzkina/test1/out.txt");
+    f.output("out.txt");
     return a.exec();
 }
