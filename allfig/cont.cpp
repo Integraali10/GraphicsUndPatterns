@@ -15,7 +15,13 @@ void Container::addFigure(Shape * newFigure)
 void Container::deleteFigure(Shape * dellFig)
 {
    std::vector<Shape*>::iterator it;
-   it = find(shapes.begin(), shapes.end(), dellFig);
+   for (unsigned int i=0; i<shapes.size();i++)
+   {
+       vector<int>o = shapes[i]->getProperties();
+       vector<int>d = dellFig->getProperties();
+       if ( std::equal (o.begin(), o.end(), d.begin()))
+        it = shapes.begin()+i;
+   }
    shapes.erase(it);
 }
 void Container::moveToNewXY(int newX, int newY, int i)

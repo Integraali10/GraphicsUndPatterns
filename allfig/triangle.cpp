@@ -17,7 +17,7 @@ string Triangle::Type()
 void Triangle::setProperties(vector<int> a)
 {
      properties.at(2)=a.at(0);
-     properties.at(3)=a.at(0);
+     properties.at(3)=a.at(1);
 }
 void Triangle::printProperties()
 {
