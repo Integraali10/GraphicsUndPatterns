@@ -27,7 +27,7 @@ public:
     QRectF boundingRect() const;
     void mouseMoveEvent(QGraphicsSceneMouseEvent * event);
     void mousePressEvent(QGraphicsSceneMouseEvent * event);
-    virtual ~Shape(){};
+    virtual ~Shape(){}
 };
 
 #endif // SHAPE_H

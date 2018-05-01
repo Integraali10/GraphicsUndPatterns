@@ -31,7 +31,7 @@ void Triangle::printProperties()
 }
 Triangle::~Triangle()
 {
-   properties.clear();
+   //properties.clear();
 }
 QPainterPath Triangle::shape() const
 {   QPainterPath a;

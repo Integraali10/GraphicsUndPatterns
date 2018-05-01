@@ -19,9 +19,11 @@ void Container::deleteFigure(Shape * dellFig)
    {
        vector<int>o = shapes[i]->getProperties();
        vector<int>d = dellFig->getProperties();
-       if ( std::equal (o.begin(), o.end(), d.begin()))
+       //if ( std::equal (o.begin(), o.end(), d.begin()))
+       if (o==d)
         it = shapes.begin()+i;
    }
+   delete *it;
    shapes.erase(it);
 }
 void Container::moveToNewXY(int newX, int newY, int i)

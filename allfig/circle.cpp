@@ -30,7 +30,7 @@ void Circle::printProperties()
 }
 Circle::~Circle()
 {
-    properties.clear();
+    //properties.clear();
 }
 QPainterPath Circle::shape() const
 {   QPainterPath a;

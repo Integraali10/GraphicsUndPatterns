@@ -32,8 +32,9 @@ void Rectangle::printProperties()
 }
 Rectangle::~Rectangle()
 {
-    properties.clear();
+   //properties.clear();
 }
+
 void Rectangle::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget){
     QRect a(-properties.at(2)/2,-properties.at(3)/2,properties.at(2),properties.at(3));
     painter->setBrush(Qt::blue);
