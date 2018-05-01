@@ -44,15 +44,15 @@ void Container::saveFile()
             shapes.at(i)->setAngel();
             vector<int> tmp = shapes.at(i)->getProperties();
 
-            cout<< shapes.at(i)->Type()[0]<<endl;
+            //cout<< shapes.at(i)->Type()[0]<<endl;
             file << shapes.at(i)->Type()[0]<<endl;
             for (unsigned int j = 0; j < tmp.size(); j++)
             {
-                cout<< tmp.at(j) << endl;
+                //cout<< tmp.at(j) << endl;
                 file << tmp.at(j) << endl;
             }
         }
-        cout<<"file successfully saved";
+        cout<<"file successfully saved\n";
     }
 
     file.close();
@@ -94,7 +94,7 @@ void Container::loadFile()
             figure->setPos(properties.at(0),properties.at(1));
             shapes.push_back(figure);}
         }
-         cout<<"file successfully load";
+         cout<<"file successfully load\n";
     }
     file.close();
 }

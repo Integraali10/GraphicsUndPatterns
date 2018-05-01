@@ -33,12 +33,6 @@ void MainWindow::addFig()
 
     Shape * tmp;
     vector <int> tmp2;
-    tmp2.push_back(x);
-    tmp2.push_back(y);
-    tmp2.push_back(ui->textEdit->toPlainText().toInt());
-    tmp2.push_back(ui->textEdit_2->toPlainText().toInt());
-    tmp2.push_back(0);
-    tmp=new Triangle(tmp2);
     if (ui->comboBox->currentIndex()==0) {
        tmp2.push_back(x);
        tmp2.push_back(y);
@@ -48,6 +42,7 @@ void MainWindow::addFig()
        tmp=new Triangle(tmp2);
        //tmp->sePos(x,y);
        //tmp->setProp,,x,y);
+       tmp2.clear();
     }
     if (ui->comboBox->currentIndex()==1) {
         tmp2.push_back(x);
@@ -56,6 +51,7 @@ void MainWindow::addFig()
         tmp2.push_back(ui->textEdit_2->toPlainText().toInt());
         tmp2.push_back(0);
         tmp=new Rectangle(tmp2);
+        tmp2.clear();
         //tmp->setProp(ui->textEdit->toPlainText().toInt(),ui->textEdit_2->toPlainText().toInt(),x,y);
     }
     if (ui->comboBox->currentIndex()==2) {
@@ -65,6 +61,7 @@ void MainWindow::addFig()
         tmp2.push_back(ui->textEdit->toPlainText().toInt());
         tmp2.push_back(0);
         tmp=new Circle(tmp2);
+        tmp2.clear();
         //tmp->setProp(ui->textEdit->toPlainText().toInt(),ui->textEdit->toPlainText().toInt(),x,y);
     }
     tmp->setPos(x,y);
