@@ -3,9 +3,9 @@
 #include <QWidget>
 #include <QMainWindow>
 #include <QMouseEvent>
-#include <QGraphicsSceneMouseEvent>
-#include <QDebug>
+#include <QResizeEvent>
 #include <QGraphicsView>
+#include <QDebug>
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +20,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     QGraphicsScene *scene;
     void mousePressEvent(QMouseEvent *event);
+    void resizeEvent(QResizeEvent *);
     ~MainWindow();
 
 private:
